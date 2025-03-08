@@ -1,0 +1,113 @@
+
+
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block body %}
+<div class="container-fluid  px-0">
+    <div id="carouselExample" class="carousel slide">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Groceries"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Clothing"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Fruits"></button>
+        </div>
+
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            <!-- Slide 1: Groceries -->
+            <div class="carousel-item active">
+                <img src="{% static '9.jfif' %}" class="d-block w-100" alt="Groceries">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fresh Groceries</h5>
+                    <p>Find all your daily essentials in one place, fresh and affordable.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Clothing -->
+            <div class="carousel-item">
+                <img src="{% static '4.jfif' %}" class="d-block w-100" alt="Clothing">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Stylish Clothing</h5>
+                    <p>Upgrade your wardrobe with trendy and comfortable fashion.</p>
+                </div>
+            </div>
+
+            <!-- Slide 3: Fruits -->
+            <div class="carousel-item">
+                <img src="{% static '2.jfif' %}" class="d-block w-100" alt="Fruits">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fresh Fruits</h5>
+                    <p>Enjoy a selection of vibrant, handpicked fruits bursting with flavor.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+
+
+<div class="album py-5 bg-light">
+    <h2><div class="container-my-4">Top Products </h2>
+        <div class="row">
+            <!-- Thumbnail 1: Groceries -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{% static '9.jfif' %}" class="bd-placeholder-img card-img-top" alt="Groceries">
+                    <div class="card-body">
+                        <h5 class="card-title">Groceries</h5>
+                        <p class="card-text">Get the freshest groceries and daily essentials delivered to your doorstep.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button type="button" class="btn btn-sm btn-primary">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thumbnail 2: Clothing -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{% static '4.jfif' %}" class="bd-placeholder-img card-img-top" alt="Clothing">
+                    <div class="card-body">
+                        <h5 class="card-title">Clothing</h5>
+                        <p class="card-text">Discover the latest styles and trends in clothing for all seasons.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button type="button" class="btn btn-sm btn-primary">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thumbnail 3: Fruits -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{% static '2.jfif' %}" class="bd-placeholder-img card-img-top" alt="Fruits">
+                    <div class="card-body">
+                        <h5 class="card-title">Fruits</h5>
+                        <p class="card-text">Enjoy fresh, juicy fruits that are perfect for any occasion.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button type="button" class="btn btn-sm btn-primary">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
